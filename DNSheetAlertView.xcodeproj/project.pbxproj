@@ -1,0 +1,628 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		700E38CB211306E300FBB7D5 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 700E38CA211306E300FBB7D5 /* AppDelegate.m */; };
+		700E38CE211306E300FBB7D5 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 700E38CD211306E300FBB7D5 /* ViewController.m */; };
+		700E38D1211306E300FBB7D5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 700E38CF211306E300FBB7D5 /* Main.storyboard */; };
+		700E38D3211306E400FBB7D5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 700E38D2211306E400FBB7D5 /* Assets.xcassets */; };
+		700E38D6211306E500FBB7D5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 700E38D4211306E500FBB7D5 /* LaunchScreen.storyboard */; };
+		700E38D9211306E500FBB7D5 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 700E38D8211306E500FBB7D5 /* main.m */; };
+		700E38FD211307B900FBB7D5 /* DNSheetAlert.m in Sources */ = {isa = PBXBuildFile; fileRef = 700E38FC211307B900FBB7D5 /* DNSheetAlert.m */; };
+		700E39262113080D00FBB7D5 /* UIView+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = 700E39252113080D00FBB7D5 /* UIView+Extension.m */; };
+		DA6905D7AA69F14DC3958954 /* libPods-DNSheetAlertView.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6DE7C8CB3F6D4E8AE2858A30 /* libPods-DNSheetAlertView.a */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		700E38DF211306E500FBB7D5 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 700E38BE211306E300FBB7D5 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 700E38C5211306E300FBB7D5;
+			remoteInfo = DNSheetAlertView;
+		};
+		700E38EA211306E500FBB7D5 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 700E38BE211306E300FBB7D5 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 700E38C5211306E300FBB7D5;
+			remoteInfo = DNSheetAlertView;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		1D1A7401E1DF3461B61BCE9C /* Pods-DNSheetAlertView.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DNSheetAlertView.release.xcconfig"; path = "Pods/Target Support Files/Pods-DNSheetAlertView/Pods-DNSheetAlertView.release.xcconfig"; sourceTree = "<group>"; };
+		6DE7C8CB3F6D4E8AE2858A30 /* libPods-DNSheetAlertView.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-DNSheetAlertView.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		700E38C6211306E300FBB7D5 /* DNSheetAlertView.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DNSheetAlertView.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		700E38C9211306E300FBB7D5 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		700E38CA211306E300FBB7D5 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		700E38CC211306E300FBB7D5 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		700E38CD211306E300FBB7D5 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		700E38D0211306E300FBB7D5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		700E38D2211306E400FBB7D5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		700E38D5211306E500FBB7D5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		700E38D7211306E500FBB7D5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		700E38D8211306E500FBB7D5 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		700E38DE211306E500FBB7D5 /* DNSheetAlertViewTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DNSheetAlertViewTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		700E38E9211306E500FBB7D5 /* DNSheetAlertViewUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DNSheetAlertViewUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		700E38FB211307B900FBB7D5 /* DNSheetAlert.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DNSheetAlert.h; sourceTree = "<group>"; };
+		700E38FC211307B900FBB7D5 /* DNSheetAlert.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DNSheetAlert.m; sourceTree = "<group>"; };
+		700E39242113080D00FBB7D5 /* UIView+Extension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Extension.h"; sourceTree = "<group>"; };
+		700E39252113080D00FBB7D5 /* UIView+Extension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Extension.m"; sourceTree = "<group>"; };
+		F222252606478198589A475A /* Pods-DNSheetAlertView.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DNSheetAlertView.debug.xcconfig"; path = "Pods/Target Support Files/Pods-DNSheetAlertView/Pods-DNSheetAlertView.debug.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		700E38C3211306E300FBB7D5 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DA6905D7AA69F14DC3958954 /* libPods-DNSheetAlertView.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		700E38DB211306E500FBB7D5 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		700E38E6211306E500FBB7D5 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		700E38BD211306E300FBB7D5 = {
+			isa = PBXGroup;
+			children = (
+				700E38C8211306E300FBB7D5 /* DNSheetAlertView */,
+				700E38C7211306E300FBB7D5 /* Products */,
+				7F6E1C610BA9EC13AFC520CB /* Pods */,
+				D2BBBF029D3B16FC93B368AD /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		700E38C7211306E300FBB7D5 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				700E38C6211306E300FBB7D5 /* DNSheetAlertView.app */,
+				700E38DE211306E500FBB7D5 /* DNSheetAlertViewTests.xctest */,
+				700E38E9211306E500FBB7D5 /* DNSheetAlertViewUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		700E38C8211306E300FBB7D5 /* DNSheetAlertView */ = {
+			isa = PBXGroup;
+			children = (
+				700E39272113081800FBB7D5 /* Category */,
+				700E39282113082A00FBB7D5 /* DNSheetAlert */,
+				700E38C9211306E300FBB7D5 /* AppDelegate.h */,
+				700E38CA211306E300FBB7D5 /* AppDelegate.m */,
+				700E38CC211306E300FBB7D5 /* ViewController.h */,
+				700E38CD211306E300FBB7D5 /* ViewController.m */,
+				700E38CF211306E300FBB7D5 /* Main.storyboard */,
+				700E38D2211306E400FBB7D5 /* Assets.xcassets */,
+				700E38D4211306E500FBB7D5 /* LaunchScreen.storyboard */,
+				700E38D7211306E500FBB7D5 /* Info.plist */,
+				700E38D8211306E500FBB7D5 /* main.m */,
+			);
+			path = DNSheetAlertView;
+			sourceTree = "<group>";
+		};
+		700E39272113081800FBB7D5 /* Category */ = {
+			isa = PBXGroup;
+			children = (
+				700E39242113080D00FBB7D5 /* UIView+Extension.h */,
+				700E39252113080D00FBB7D5 /* UIView+Extension.m */,
+			);
+			path = Category;
+			sourceTree = "<group>";
+		};
+		700E39282113082A00FBB7D5 /* DNSheetAlert */ = {
+			isa = PBXGroup;
+			children = (
+				700E38FB211307B900FBB7D5 /* DNSheetAlert.h */,
+				700E38FC211307B900FBB7D5 /* DNSheetAlert.m */,
+			);
+			path = DNSheetAlert;
+			sourceTree = "<group>";
+		};
+		7F6E1C610BA9EC13AFC520CB /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				F222252606478198589A475A /* Pods-DNSheetAlertView.debug.xcconfig */,
+				1D1A7401E1DF3461B61BCE9C /* Pods-DNSheetAlertView.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		D2BBBF029D3B16FC93B368AD /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				6DE7C8CB3F6D4E8AE2858A30 /* libPods-DNSheetAlertView.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		700E38C5211306E300FBB7D5 /* DNSheetAlertView */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 700E38F2211306E500FBB7D5 /* Build configuration list for PBXNativeTarget "DNSheetAlertView" */;
+			buildPhases = (
+				1F7EBA7CD280C47AD5EB6F4F /* [CP] Check Pods Manifest.lock */,
+				700E38C2211306E300FBB7D5 /* Sources */,
+				700E38C3211306E300FBB7D5 /* Frameworks */,
+				700E38C4211306E300FBB7D5 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = DNSheetAlertView;
+			productName = DNSheetAlertView;
+			productReference = 700E38C6211306E300FBB7D5 /* DNSheetAlertView.app */;
+			productType = "com.apple.product-type.application";
+		};
+		700E38DD211306E500FBB7D5 /* DNSheetAlertViewTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 700E38F5211306E500FBB7D5 /* Build configuration list for PBXNativeTarget "DNSheetAlertViewTests" */;
+			buildPhases = (
+				700E38DA211306E500FBB7D5 /* Sources */,
+				700E38DB211306E500FBB7D5 /* Frameworks */,
+				700E38DC211306E500FBB7D5 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				700E38E0211306E500FBB7D5 /* PBXTargetDependency */,
+			);
+			name = DNSheetAlertViewTests;
+			productName = DNSheetAlertViewTests;
+			productReference = 700E38DE211306E500FBB7D5 /* DNSheetAlertViewTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		700E38E8211306E500FBB7D5 /* DNSheetAlertViewUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 700E38F8211306E500FBB7D5 /* Build configuration list for PBXNativeTarget "DNSheetAlertViewUITests" */;
+			buildPhases = (
+				700E38E5211306E500FBB7D5 /* Sources */,
+				700E38E6211306E500FBB7D5 /* Frameworks */,
+				700E38E7211306E500FBB7D5 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				700E38EB211306E500FBB7D5 /* PBXTargetDependency */,
+			);
+			name = DNSheetAlertViewUITests;
+			productName = DNSheetAlertViewUITests;
+			productReference = 700E38E9211306E500FBB7D5 /* DNSheetAlertViewUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		700E38BE211306E300FBB7D5 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0940;
+				ORGANIZATIONNAME = zjs;
+				TargetAttributes = {
+					700E38C5211306E300FBB7D5 = {
+						CreatedOnToolsVersion = 9.4.1;
+					};
+					700E38DD211306E500FBB7D5 = {
+						CreatedOnToolsVersion = 9.4.1;
+						TestTargetID = 700E38C5211306E300FBB7D5;
+					};
+					700E38E8211306E500FBB7D5 = {
+						CreatedOnToolsVersion = 9.4.1;
+						TestTargetID = 700E38C5211306E300FBB7D5;
+					};
+				};
+			};
+			buildConfigurationList = 700E38C1211306E300FBB7D5 /* Build configuration list for PBXProject "DNSheetAlertView" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 700E38BD211306E300FBB7D5;
+			productRefGroup = 700E38C7211306E300FBB7D5 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				700E38C5211306E300FBB7D5 /* DNSheetAlertView */,
+				700E38DD211306E500FBB7D5 /* DNSheetAlertViewTests */,
+				700E38E8211306E500FBB7D5 /* DNSheetAlertViewUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		700E38C4211306E300FBB7D5 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				700E38D6211306E500FBB7D5 /* LaunchScreen.storyboard in Resources */,
+				700E38D3211306E400FBB7D5 /* Assets.xcassets in Resources */,
+				700E38D1211306E300FBB7D5 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		700E38DC211306E500FBB7D5 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		700E38E7211306E500FBB7D5 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		1F7EBA7CD280C47AD5EB6F4F /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-DNSheetAlertView-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		700E38C2211306E300FBB7D5 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				700E39262113080D00FBB7D5 /* UIView+Extension.m in Sources */,
+				700E38FD211307B900FBB7D5 /* DNSheetAlert.m in Sources */,
+				700E38CE211306E300FBB7D5 /* ViewController.m in Sources */,
+				700E38D9211306E500FBB7D5 /* main.m in Sources */,
+				700E38CB211306E300FBB7D5 /* AppDelegate.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		700E38DA211306E500FBB7D5 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		700E38E5211306E500FBB7D5 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		700E38E0211306E500FBB7D5 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 700E38C5211306E300FBB7D5 /* DNSheetAlertView */;
+			targetProxy = 700E38DF211306E500FBB7D5 /* PBXContainerItemProxy */;
+		};
+		700E38EB211306E500FBB7D5 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 700E38C5211306E300FBB7D5 /* DNSheetAlertView */;
+			targetProxy = 700E38EA211306E500FBB7D5 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		700E38CF211306E300FBB7D5 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				700E38D0211306E300FBB7D5 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		700E38D4211306E500FBB7D5 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				700E38D5211306E500FBB7D5 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		700E38F0211306E500FBB7D5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		700E38F1211306E500FBB7D5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		700E38F3211306E500FBB7D5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = F222252606478198589A475A /* Pods-DNSheetAlertView.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = MERPXG389L;
+				INFOPLIST_FILE = DNSheetAlertView/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = Remember.DNSheetAlertView;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		700E38F4211306E500FBB7D5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1D1A7401E1DF3461B61BCE9C /* Pods-DNSheetAlertView.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = MERPXG389L;
+				INFOPLIST_FILE = DNSheetAlertView/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = Remember.DNSheetAlertView;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		700E38F6211306E500FBB7D5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = DNSheetAlertViewTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = Remember.DNSheetAlertViewTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/DNSheetAlertView.app/DNSheetAlertView";
+			};
+			name = Debug;
+		};
+		700E38F7211306E500FBB7D5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = DNSheetAlertViewTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = Remember.DNSheetAlertViewTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/DNSheetAlertView.app/DNSheetAlertView";
+			};
+			name = Release;
+		};
+		700E38F9211306E500FBB7D5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = DNSheetAlertViewUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = Remember.DNSheetAlertViewUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = DNSheetAlertView;
+			};
+			name = Debug;
+		};
+		700E38FA211306E500FBB7D5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = DNSheetAlertViewUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = Remember.DNSheetAlertViewUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = DNSheetAlertView;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		700E38C1211306E300FBB7D5 /* Build configuration list for PBXProject "DNSheetAlertView" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				700E38F0211306E500FBB7D5 /* Debug */,
+				700E38F1211306E500FBB7D5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		700E38F2211306E500FBB7D5 /* Build configuration list for PBXNativeTarget "DNSheetAlertView" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				700E38F3211306E500FBB7D5 /* Debug */,
+				700E38F4211306E500FBB7D5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		700E38F5211306E500FBB7D5 /* Build configuration list for PBXNativeTarget "DNSheetAlertViewTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				700E38F6211306E500FBB7D5 /* Debug */,
+				700E38F7211306E500FBB7D5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		700E38F8211306E500FBB7D5 /* Build configuration list for PBXNativeTarget "DNSheetAlertViewUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				700E38F9211306E500FBB7D5 /* Debug */,
+				700E38FA211306E500FBB7D5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 700E38BE211306E300FBB7D5 /* Project object */;
+}
