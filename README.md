@@ -2,7 +2,7 @@
 
 使用：    
 
-1.将 DNSheetAlert 文件夹拖入工程文件夹，并添加 Masonry     
+1.将 DNSheetAlert 文件夹拖入工程文件夹，并添加 [Masonry]:https://github.com/SnapKit/Masonry     
 
 2.导入头文件 #import "DNSheetAlert.h"    
 
