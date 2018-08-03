@@ -136,10 +136,10 @@ static DNSheetAlert * _sheetAlert = nil;
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     
-    DNSheetAlertCell * cell = [tableView dequeueReusableCellWithIdentifier:@""];
+    DNSheetAlertCell * cell = [tableView dequeueReusableCellWithIdentifier:@"alertCell"];
     cell.selectionStyle = UITableViewCellSelectionStyleNone;
     if (!cell) {
-        cell = [[DNSheetAlertCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@""];
+        cell = [[DNSheetAlertCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"alertCell"];
     }
     cell.textLabel.text = self.isDataArr ? self.titleArray[indexPath.section][indexPath.row]:self.titleArray[indexPath.row];
     return cell;
