@@ -1,3 +1,0 @@
-target 'DNSheetAlertView' do
-pod 'Masonry'
-end
