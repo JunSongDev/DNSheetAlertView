@@ -25,18 +25,26 @@
     NSInteger alert_W;
     NSInteger alert_H;
 }
-
+/** 标题数组 */
 @property (nonatomic,   copy) NSArray * titleArray;
+
+/** 颜色数组 */
 @property (nonatomic,   copy) NSArray * colorArray;
+
+/** 包含 tableView 的 view */
 @property (nonatomic, strong) UIView  * containView;
+
+/** tableView */
 @property (nonatomic, strong) UITableView * tableView;
+
+/** 是否为数组 */
 @property (nonatomic, assign, getter=isDataArr) BOOL dataArr;
 @end
 
 static DNSheetAlert * _sheetAlert = nil;
 
 @implementation DNSheetAlert
-
+// 单例创建
 + (instancetype)shareInstance {
     
     static dispatch_once_t onceToken;
@@ -47,7 +55,7 @@ static DNSheetAlert * _sheetAlert = nil;
     });
     return _sheetAlert;
 }
-
+// 重写 allocWithZone:
 + (instancetype)allocWithZone:(struct _NSZone *)zone {
     
     static dispatch_once_t onceToken;
@@ -62,7 +70,7 @@ static DNSheetAlert * _sheetAlert = nil;
 - (id)copyWithZone:(NSZone *)zone {
     return _sheetAlert;
 }
-
+// 创建方法
 - (void)alertWithData:(NSArray *)data Delegate:(id<DNSheetAlertDelegate>)delegate {
     
     self.titleArray = data;
@@ -76,20 +84,21 @@ static DNSheetAlert * _sheetAlert = nil;
     if (self) {
         
         self.frame = [UIScreen mainScreen].bounds;
+        // 添加单击手势
         UITapGestureRecognizer * tap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(dn_dismissAlertSheet)];
         tap.delegate = self;
         [self addGestureRecognizer:tap];
     }
     return self;
 }
-
+// 添加控件
 - (void)setControlForSuper {
     
     self.backgroundColor = [UIColor colorWithWhite:0.5 alpha:0.4];
     [self addSubview:self.containView];
     [self.containView addSubview:self.tableView];
 }
-
+// 添加约束
 - (void)addConstraintsForSuper {
     
     [self.containView mas_makeConstraints:^(MASConstraintMaker *make) {
@@ -108,6 +117,7 @@ static DNSheetAlert * _sheetAlert = nil;
         make.top.left.right.mas_equalTo(self.containView);
         make.bottom.mas_equalTo(self.containView.mas_bottom).inset(HOME_INDICATOR_HEIGHT);
     }];
+    // 获取 containView 的高度
     alert_H = self.containView.dn_height;
 }
 
@@ -148,11 +158,13 @@ static DNSheetAlert * _sheetAlert = nil;
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
+    // 点击 cell 使用代理传递点击事件
     DNSheetAlertCell * cell = [tableView cellForRowAtIndexPath:indexPath];
     if (_delegate && [_delegate respondsToSelector:@selector(dnSheetAlertSelectedIdentifier:)]) {
             
         [_delegate dnSheetAlertSelectedIdentifier:cell.textLabel.text];
     }
+    // 消失
     [self dn_dismissAlertSheet];
 }
 
@@ -173,23 +185,23 @@ static DNSheetAlert * _sheetAlert = nil;
     return 55;
 }
 
-
-
 ///===============================================================
 ///===============================================================
 
-
+// 显示动画
 - (void)dn_showAlertSheet {
     
     CATransition *transition = [CATransition animation];
+    // 动画时长
     transition.duration = 0.35f;
+    // 动画类型
     transition.type = kCATransitionMoveIn;
     transition.subtype = kCATransitionFromTop;
     [self.containView.layer addAnimation:transition forKey:nil];
     
     [[UIApplication sharedApplication].keyWindow addSubview:self];
 }
-
+// 消失动画
 - (void)dn_dismissAlertSheet {
     
     [UIView animateWithDuration:0.35 delay:0 options:UIViewAnimationOptionCurveEaseIn animations:^{
@@ -207,17 +219,20 @@ static DNSheetAlert * _sheetAlert = nil;
 - (void)setTitleArray:(NSArray *)titleArray {
     
     _titleArray = titleArray;
+    // 判断 titleArray 是否为空
     if (titleArray.count != 0) {
-        
+        // 遍历数组
         for (int i = 0; i < titleArray.count; i++) {
-            
+            // 判断数组元素是否为 NSArray
             if ([titleArray[i] isKindOfClass:[NSArray class]]) {
                 
                 self.dataArr = YES;
             }
+            // 判断数组元素是否为 NSString
             else if ([titleArray[i] isKindOfClass:[NSString class]]) {
                 self.dataArr = NO;
             }
+            // 既不是数组，也不是字符串则抛出异常
             else {
                 @throw [NSException exceptionWithName:NSStringFromClass([self class])
                                                reason:@"标题数组无法读取"
@@ -228,6 +243,7 @@ static DNSheetAlert * _sheetAlert = nil;
         [self addConstraintsForSuper];
     }
     else {
+        // 数组为空，抛出异常
         @throw [NSException exceptionWithName:NSStringFromClass([self class])
                                        reason:@"标题数组不能为空"
                                      userInfo:nil];
@@ -248,12 +264,18 @@ static DNSheetAlert * _sheetAlert = nil;
     
     if (!_tableView) {
         _tableView = [[UITableView alloc] init];_tableView = [[UITableView alloc]init];
-        _tableView.backgroundColor = [UIColor colorWithRed:225/225.0 green:225/225.0 blue:225/225.0 alpha:0.6];
+        // 背景颜色
+        _tableView.backgroundColor = [UIColor colorWithRed:225/225.0
+                                                     green:225/225.0
+                                                      blue:225/225.0
+                                                     alpha:0.6];
+        // 数据源、代理
         _tableView.delegate = self;
         _tableView.dataSource = self;
+        // 是否可滑动
         _tableView.scrollEnabled = NO;
         _tableView.tableFooterView = [[UIView alloc]init];
-        
+        // 预估行高，（若实现了 heightForRowAtIndexPath: 方法，则返回真是行高无效)
         _tableView.estimatedRowHeight = 40;
         _tableView.estimatedSectionHeaderHeight = 0;
         _tableView.estimatedSectionFooterHeight = 0;
@@ -279,7 +301,7 @@ static DNSheetAlert * _sheetAlert = nil;
     
     self = [super initWithStyle:style reuseIdentifier:reuseIdentifier];
     if (self) {
-        
+        // 文字居中显示
         self.textLabel.textAlignment = NSTextAlignmentCenter;
     }
     return self;
