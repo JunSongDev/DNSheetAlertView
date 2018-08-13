@@ -33,8 +33,8 @@
     [[DNSheetAlert shareInstance] alertWithData:@[@[@"相机",@"从相册选取"],@[@"取消"]] Delegate:self];
 }
 
-- (void)dnSheetAlertSelectedIdentifier:(NSString *)identifier {
+- (void)dnSheetAlertSelectedIdentifier:(NSString *)identifier selectIndex:(NSIndexPath *)selectIndex {
     
-    NSLog(@"%@",identifier);
+    NSLog(@"%@---%ld--%ld",identifier, (long)selectIndex.section, (long)selectIndex.row);
 }
 @end

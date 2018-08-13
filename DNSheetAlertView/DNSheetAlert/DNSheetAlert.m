@@ -22,6 +22,7 @@
 
 @interface DNSheetAlert ()<UITableViewDelegate, UITableViewDataSource, UIGestureRecognizerDelegate>
 {
+    UIView    *lineView;
     NSInteger alert_W;
     NSInteger alert_H;
 }
@@ -94,9 +95,13 @@ static DNSheetAlert * _sheetAlert = nil;
 // 添加控件
 - (void)setControlForSuper {
     
+    lineView = [[UIView alloc] init];
+    lineView.backgroundColor = [UIColor lightGrayColor];
+    
     self.backgroundColor = [UIColor colorWithWhite:0.5 alpha:0.4];
     [self addSubview:self.containView];
     [self.containView addSubview:self.tableView];
+    [self.containView addSubview:lineView];
 }
 // 添加约束
 - (void)addConstraintsForSuper {
@@ -116,6 +121,13 @@ static DNSheetAlert * _sheetAlert = nil;
        
         make.top.left.right.mas_equalTo(self.containView);
         make.bottom.mas_equalTo(self.containView.mas_bottom).inset(HOME_INDICATOR_HEIGHT);
+    }];
+    
+    [lineView mas_makeConstraints:^(MASConstraintMaker *make) {
+       
+        make.top.mas_equalTo(self.containView.mas_top).inset(55);
+        make.left.right.mas_equalTo(self.containView).inset(5);
+        make.height.mas_equalTo(@0.8);
     }];
     // 获取 containView 的高度
     alert_H = self.containView.dn_height;
@@ -160,9 +172,9 @@ static DNSheetAlert * _sheetAlert = nil;
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
     // 点击 cell 使用代理传递点击事件
     DNSheetAlertCell * cell = [tableView cellForRowAtIndexPath:indexPath];
-    if (_delegate && [_delegate respondsToSelector:@selector(dnSheetAlertSelectedIdentifier:)]) {
+    if (_delegate && [_delegate respondsToSelector:@selector(dnSheetAlertSelectedIdentifier:selectIndex:)]) {
             
-        [_delegate dnSheetAlertSelectedIdentifier:cell.textLabel.text];
+        [_delegate dnSheetAlertSelectedIdentifier:cell.textLabel.text selectIndex:indexPath];
     }
     // 消失
     [self dn_dismissAlertSheet];
@@ -280,6 +292,8 @@ static DNSheetAlert * _sheetAlert = nil;
         _tableView.estimatedSectionHeaderHeight = 0;
         _tableView.estimatedSectionFooterHeight = 0;
         _tableView.rowHeight = UITableViewAutomaticDimension;
+        // 去除分割线
+        _tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
         
         if (@available(iOS 11.0, *)) {
             self.tableView.contentInsetAdjustmentBehavior = UIScrollViewContentInsetAdjustmentNever;

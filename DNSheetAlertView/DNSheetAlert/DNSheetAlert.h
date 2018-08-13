@@ -10,7 +10,7 @@
 // 申明代理方法
 @protocol DNSheetAlertDelegate <NSObject>
 @required;
-- (void)dnSheetAlertSelectedIdentifier:(NSString *)identifier;
+- (void)dnSheetAlertSelectedIdentifier:(NSString *)identifier selectIndex:(NSIndexPath *)selectIndex;
 @end
 
 @interface DNSheetAlert : UIView
